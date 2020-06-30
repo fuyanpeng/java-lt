@@ -23,9 +23,29 @@ import common.ListNode;
 
 public class AddTwoNumbers {
 
-    public static ListNode addTwoNumners(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode head = new ListNode(0);
+        ListNode cursor = head;
+        int carry = 0;
 
-        return new ListNode(1);
+        while (l1 != null || l2 != null) {
+            int l1Val = l1 != null ? l1.val:0;
+            int l2Val = l2 != null ? l2.val:0;
+            int s = l1Val + l2Val + carry;
+            cursor.next = new ListNode(s % 10);
+            carry = s / 10; 
+            cursor = cursor.next;
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+        }
+        if (carry > 0) {
+            cursor.next = new ListNode(carry);
+        }
+        return head.next;
     }
 
 }
