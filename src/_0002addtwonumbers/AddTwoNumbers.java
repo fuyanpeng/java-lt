@@ -23,7 +23,7 @@ import common.ListNode;
 
 public class AddTwoNumbers {
 
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);
         ListNode cursor = head;
         int carry = 0;
