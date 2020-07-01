@@ -27,7 +27,7 @@ import java.util.HashMap;
 
 public class LengthOfLongestSubString {
 
-    public static int longthOfLongestSubString(String s) {
+    public static int lengthOfLongestSubString(String s) {
         int maxCount = 0;
         int cursorCount;
         int leftIndex = -1;
